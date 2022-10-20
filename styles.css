@@ -1,0 +1,144 @@
+:root {
+  --clr-mainbackground: hsl(233, 47%, 7%);
+  --clr-cardbackground: hsl(244, 38%, 16%);
+  --clr-accent: hsl(277, 64%, 61%);
+  --clr-mainheading: hsl(0, 0%, 100%);
+  --clr-mainparagraph: hsla(0, 0%, 100%, 0.75);
+  --clr-statheading: hsla(0, 0%, 100%, 0.6);
+  --ff-lexend: 'Lexend Deca', sans-serif;
+  --ff-inter: 'Inter', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-size: 15px;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-mainbackground);
+  color: var(--clr-mainparagraph);
+  font-family: var(--ff-lexend);
+}
+
+main {
+  background-color: var(--clr-cardbackground);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 2rem;
+  border-radius: 5px;
+}
+picture {
+  background: var(--clr-accent);
+  border-radius: 0 5px 0 0;
+}
+
+picture img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: 80%;
+}
+
+article {
+  display: grid;
+  place-content: center;
+  padding: 3rem;
+  row-gap: 5rem;
+}
+h2 {
+  font-size: 2rem;
+  color: var(--clr-mainheading);
+  font-family: var(--ff-inter);
+  font-weight: 700;
+}
+h2 span {
+  color: var(--clr-accent);
+}
+#description p {
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 2rem 2rem 0 0;
+}
+#stat {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-transform: uppercase;
+  font-family: var(--ff-lexend);
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  color: var(--clr-mainparagraph);
+}
+.success p:first-of-type {
+  font-weight: 700;
+  color: var(--clr-mainheading);
+  font-size: 1.5rem;
+  font-family: var(--ff-inter);
+}
+.success:first-child p:first-of-type {
+  text-transform: lowercase;
+}
+
+@media (max-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+    text-align: center;
+  }
+  picture {
+    grid-row: 1/2;
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  #stat {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  article {
+    row-gap: 1rem;
+    padding: 1rem;
+  }
+  #description p {
+    font-weight: 100;
+    font-size: 0.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .success p:first-of-type {
+    font-size: 1rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--clr-accent);
+  text-decoration: none;
+}
