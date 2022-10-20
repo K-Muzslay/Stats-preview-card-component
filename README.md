@@ -25,7 +25,7 @@ Users should be able to:
 ### Screenshot
 
 Desktop
-![Desktop](/screenshots/screenshot-desktop.jpg)
+![Desktop](/screeshots/screenshot-desktop.jpg)
 
 Tablet
 ![Tablet](/screeshots/screenshot-tablet.jpg)
